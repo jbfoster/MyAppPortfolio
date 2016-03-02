@@ -1,13 +1,12 @@
 package com.example.android.myappportfolio;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,14 +17,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -49,4 +40,30 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void spotifyToast (View view) {
+        Toast.makeText(this, getString(R.string.spotify_toast_text), Toast.LENGTH_SHORT).show();
+        }
+
+    public void scoresToast (View view) {
+        Toast.makeText(this, getString(R.string.scores_toast_text), Toast.LENGTH_SHORT).show();
+    }
+
+    public void libraryToast (View view) {
+        Toast.makeText(this, getString(R.string.library_toast_text), Toast.LENGTH_SHORT).show();
+    }
+
+    public void buildToast (View view) {
+        Toast.makeText(this, getString(R.string.build_toast_text), Toast.LENGTH_SHORT).show();
+    }
+
+    public void xyzToast (View view) {
+        Toast.makeText(this, getString(R.string.xyz_toast_text), Toast.LENGTH_SHORT).show();
+    }
+
+    public void capstoneToast (View view) {
+        Toast.makeText(this, getString(R.string.capstone_toast_text), Toast.LENGTH_SHORT).show();
+    }
+
+
 }
